@@ -1,4 +1,4 @@
-import { parseOrt, generateOrt, OrtParseError } from './ort.js';
+import { parse, generate, OrtParseError } from 'https://esm.sh/ort-ts';
 
 export class Converter {
     constructor(inputArea, outputArea) {
@@ -15,7 +15,7 @@ export class Converter {
             }
 
             const json = JSON.parse(input);
-            const ort = generateOrt(json);
+            const ort = generate(json);
             this.outputArea.value = ort;
         } catch (error) {
             this.outputArea.value = `Error: ${error.message}`;
@@ -30,7 +30,7 @@ export class Converter {
                 return;
             }
 
-            const ortValue = parseOrt(input);
+            const ortValue = parse(input);
             const json = ortValue.toNative();
             this.outputArea.value = JSON.stringify(json, null, 2);
         } catch (error) {
