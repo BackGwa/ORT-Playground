@@ -45,7 +45,7 @@
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .logo {
@@ -65,7 +65,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding: 1rem;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .editor-panel {
