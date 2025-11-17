@@ -13,20 +13,25 @@
     <link rel="stylesheet" href="styles/components.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>ORT PLAYGROUND</h1>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-title">
+                <img src="assets/ORT.png" alt="ORT Logo" class="logo">
+                <h1>ORT PLAYGROUND</h1>
+            </div>
             <div class="mode-switch">
                 <button id="mode-json-to-ort" class="mode-btn active">JSON to ORT</button>
                 <button id="mode-ort-to-json" class="mode-btn">ORT to JSON</button>
             </div>
-        </header>
+        </div>
+    </header>
 
+    <div class="container">
         <main class="main">
             <div class="editor-panel">
                 <div class="panel-header">
                     <span id="input-label">JSON Input</span>
-                    <span class="char-count" id="input-count">0 chars</span>
+                    <span class="char-count" id="input-count"></span>
                 </div>
                 <div id="input-area" class="editor"></div>
             </div>
@@ -34,7 +39,7 @@
             <div class="editor-panel">
                 <div class="panel-header">
                     <span id="output-label">ORT Output</span>
-                    <span class="char-count" id="output-count">0 chars</span>
+                    <span class="char-count" id="output-count"></span>
                 </div>
                 <div id="output-area" class="editor"></div>
             </div>
