@@ -3,11 +3,15 @@ export function updateCharCount(text, countElement) {
     countElement.textContent = `${count} chars`;
 }
 
-export function setupCharCounter(textareaElement, countElement) {
+export function setupCharCounter(editor, countElement) {
     const updateCount = () => {
-        updateCharCount(textareaElement.value, countElement);
+        updateCharCount(editor.getValue(), countElement);
     };
 
-    textareaElement.addEventListener('input', updateCount);
+    // Initial update
     updateCount();
+
+    // CodeMirror doesn't use traditional event listeners
+    // The editor setup will handle change callbacks
+    return updateCount;
 }
