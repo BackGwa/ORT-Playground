@@ -54,6 +54,10 @@
     color: var(--text-secondary);
 }
 
+.editor.error {
+    color: var(--error-color);
+}
+
 .char-count {
     font-family: var(--font-mono);
     font-size: 0.75rem;
